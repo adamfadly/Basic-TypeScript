@@ -1,11 +1,10 @@
-const button = document.querySelector("button")! as HTMLButtonElement;
-const input1 = document.getElementById("valueOne")! as HTMLInputElement;
-const input2 = document.getElementById("valueTwo")! as HTMLInputElement;
+const value1 = 2;
+const value2 = 4;
 
-function addNum(input1: number, input2: number) {
-  return input1 + input2;
+function add(number1: number, number2: number): number {
+  return number1 + number2;
 }
 
-button.addEventListener("click", function () {
-  console.log(addNum(+input1.value, +input2.value));
-});
+const result = add(value1, value2);
+
+console.log(result);
