@@ -1,12 +1,16 @@
-// declare array with type in TS
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-} = {
-  name: "joko",
-  age: 30,
-  hobbies: ["football", "touring"],
-};
+// union types
+function add(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + input2.toString();
+  }
+  return result;
+}
 
-console.log(person.hobbies);
+const combinedAge = add(20, 30);
+console.log(combinedAge);
+
+const mixingName = add("yo", "decan");
+console.log(mixingName);
