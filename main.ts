@@ -1,6 +1,12 @@
-// declare variables with type in TS
-const exampleNumber: number = 5;
-const exampleString: string = "str";
-const exampleBoolean: boolean = true;
+// declare array with type in TS
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+} = {
+  name: "joko",
+  age: 30,
+  hobbies: ["football", "touring"],
+};
 
-console.log(exampleBoolean, exampleNumber, exampleString);
+console.log(person.hobbies);
