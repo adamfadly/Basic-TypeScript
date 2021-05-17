@@ -1,10 +1,6 @@
-const value1 = 2;
-const value2 = 4;
+// declare variables with type in TS
+const exampleNumber: number = 5;
+const exampleString: string = "str";
+const exampleBoolean: boolean = true;
 
-function add(number1: number, number2: number): number {
-  return number1 + number2;
-}
-
-const result = add(value1, value2);
-
-console.log(result);
+console.log(exampleBoolean, exampleNumber, exampleString);
