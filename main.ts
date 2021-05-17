@@ -3,10 +3,14 @@ const person: {
   name: string;
   age: number;
   hobbies: string[];
+  role: [string, number];
 } = {
   name: "joko",
   age: 30,
   hobbies: ["football", "touring"],
+  role: ["senior", 10],
 };
 
-console.log(person.hobbies);
+person.role[0] = "manager";
+
+console.log(person.role);
