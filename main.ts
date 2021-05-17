@@ -1,6 +1,10 @@
-// declare variables with type in TS
-const exampleNumber: number = 5;
-const exampleString: string = "str";
-const exampleBoolean: boolean = true;
+// declare object with type in TS
+const person: object{
+  name: string;
+  age: number;
+} = {
+  name: "santo",
+  age: 70,
+};
 
-console.log(exampleBoolean, exampleNumber, exampleString);
+console.log(person);
