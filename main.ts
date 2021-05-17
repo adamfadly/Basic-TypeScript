@@ -20,10 +20,9 @@ function add(
 }
 
 const combinedAge = add(20, 30, "as-number");
-console.log(combinedAge);
-
 const combinedStringAge = add("40", "50", "as-text");
-console.log(combinedStringAge);
-
 const mixingName = add("yo", "decan", "as-text");
+
+console.log(combinedAge);
+console.log(combinedStringAge);
 console.log(mixingName);
