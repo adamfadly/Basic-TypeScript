@@ -1,29 +1,34 @@
-// union types && aliases(costume types)
+// function return types and void
 
-type NumString = number | string;
+function addNum(num1: number, num2: number): number {
+  return num1 + num2;
+}
 
-function add(
-  input1: NumString,
-  input2: NumString,
-  resultConversion: "as-text" | "as-number"
-) {
-  let result;
-  if (
-    (typeof input1 === "number" && typeof input2 === "number") ||
-    resultConversion === "as-number"
-  ) {
-    result = +input1 + +input2;
-  } else {
-    result = input1.toString() + input2.toString();
-  }
+function printResult(num: number): void {
+  console.log("result: " + num);
+  // return "result: " + num;
+}
+
+function proceed(yolo: number): string {
+  const result = yolo.toString();
   return result;
 }
 
-const combinedAge = add(20, 30, "as-number");
-console.log(combinedAge);
+// this function has params 2 number type and a single function
+// showing typescript function types in the parameters and t
+function convertNumToString(
+  num1: number,
+  num2: number,
+  translator: Function
+): number {
+  const result = "";
 
-const combinedStringAge = add("40", "50", "as-text");
-console.log(combinedStringAge);
+  let temp = num1 + num2;
 
-const mixingName = add("yo", "decan", "as-text");
-console.log(mixingName);
+  return translator(temp);
+}
+
+let olo = convertNumToString(2, 3, proceed);
+console.log(typeof convertNumToString(2, 3, proceed));
+console.log(typeof olo);
+console.log(olo);
