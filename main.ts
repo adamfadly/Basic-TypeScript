@@ -1,38 +1,16 @@
-// function return types and void
+// types Never
 
-function addNum(num1: number, num2: number): number {
-  return num1 + num2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = "willian";
+if (userInput === "string") {
+  userName = userInput;
 }
 
-function printResult(num: number): void {
-  console.log("result: " + num);
-  // return "result: " + num;
+function generatorError(message: string, code: number) {
+  throw { message: message, errorCode: code };
 }
 
-function proceed(yolo: number): string {
-  const result = yolo.toString();
-  return result;
-}
-
-function addHandle(
-  number1: number,
-  number2: number,
-  callBack: (result) => void
-) {
-  let temp = number1 + number2;
-  return callBack(temp);
-}
-
-// this function has params 2 number type and a single function
-// showing typescript function types in the parameters
-function convertNumToString(
-  num1: number,
-  num2: number,
-  translator: Function
-): number {
-  let temp = num1 + num2;
-  return translator(temp);
-}
-
-let olo = convertNumToString(2, 3, proceed);
-console.log(typeof convertNumToString(2, 3, proceed));
+console.log(generatorError("bad request", 400));
