@@ -1,16 +1,38 @@
-// union types
-function add(input1: number | string, input2: number | string) {
-  let result;
-  if (typeof input1 === "number" && typeof input2 === "number") {
-    result = input1 + input2;
-  } else {
-    result = input1.toString() + input2.toString();
-  }
+// function return types and void
+
+function addNum(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+function printResult(num: number): void {
+  console.log("result: " + num);
+  // return "result: " + num;
+}
+
+function proceed(yolo: number): string {
+  const result = yolo.toString();
   return result;
 }
 
-const combinedAge = add(20, 30);
-console.log(combinedAge);
+function addHandle(
+  number1: number,
+  number2: number,
+  callBack: (result) => void
+) {
+  let temp = number1 + number2;
+  return callBack(temp);
+}
 
-const mixingName = add("yo", "decan");
-console.log(mixingName);
+// this function has params 2 number type and a single function
+// showing typescript function types in the parameters
+function convertNumToString(
+  num1: number,
+  num2: number,
+  translator: Function
+): number {
+  let temp = num1 + num2;
+  return translator(temp);
+}
+
+let olo = convertNumToString(2, 3, proceed);
+console.log(typeof convertNumToString(2, 3, proceed));
