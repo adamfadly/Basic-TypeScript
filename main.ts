@@ -14,15 +14,6 @@ function proceed(yolo: number): string {
   return result;
 }
 
-function addHandle(
-  number1: number,
-  number2: number,
-  callBack: (result) => void
-) {
-  let temp = number1 + number2;
-  return callBack(temp);
-}
-
 // this function has params 2 number type and a single function
 // showing typescript function types in the parameters
 function convertNumToString(
