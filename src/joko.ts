@@ -1,1 +1,0 @@
-let user: string = "joko";
