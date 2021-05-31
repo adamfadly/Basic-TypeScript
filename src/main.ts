@@ -1,5 +1,9 @@
-const button = document.querySelector("button")!;
+function addNum(num1: number, num2: number) {
+  return num1 + num2;
+}
 
-button.addEventListener("click", () => {
-  console.log("Yolo MTF!");
-});
+const minus = (num1: number, num2: number) => num1 - num2;
+
+console.log(addNum(1, 7));
+
+console.log(minus(2, 1));
