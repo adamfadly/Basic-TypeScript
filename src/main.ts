@@ -1,16 +1,31 @@
-//if Default function has two paramatesr always put default parameter on the second parameter otherwise will thrown an error
-function addNum(num1: number, num2: number = 10) {
-  return num1 + num2;
-}
-// Default parameter only has one parameter
-function printString(name: string = "mandra") {
-  return name;
-}
+const hobbies = ["Football", "Bike", "swim"];
+const newHobbies: string[] = ["Brew Coffee", "Baking"];
 
-const minus = (num1: number, num2: number = 2) => num1 - num2;
+hobbies.push(...newHobbies);
 
-console.log(addNum(1));
+console.log(hobbies);
 
-console.log(minus(1));
+const person: object = {
+  name: "Susi",
+  age: 32,
+};
 
-console.log(printString("atun"));
+const address = {
+  address1: "jl tikus",
+  address2: "jl suka maju",
+  projects: ["loco", "okok", "aaa"],
+};
+
+const detail = {
+  role: "manager",
+  other: person,
+  ...address,
+};
+
+const fullDetail = {
+  id: 1111,
+  ...detail,
+};
+
+console.log(fullDetail);
+console.log(detail);
